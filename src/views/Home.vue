@@ -3,6 +3,7 @@
   <div class="home">
  
     <h3>Inicio</h3>
+    
   </div>
 </template>
 

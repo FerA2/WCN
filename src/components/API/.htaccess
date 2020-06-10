@@ -1,0 +1,11 @@
+
+# Añadimos URLS amigables a nuestra API
+# Permite añadir rutas
+Options +FollowSymlinks
+
+# Permite rewrite
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Redirecciona a api.php y almacena el resto de la url como una variable
+RewriteRule ^(.*)$ %{ENV:BASE}api.php?url=$1 [QSA,L]
